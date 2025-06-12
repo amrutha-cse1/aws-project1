@@ -33,7 +33,7 @@ This project demonstrates two deployment approaches for a static website using *
 ---
 
 ##  Live Project
-- CloudFront Link: https://d1eo49ry4vts3m.cloudfront.net/
+- CloudFront Link:https://d13l8mc1goj0sd.cloudfront.net/
 -  EC2 Instance : http://3.105.227.200
 
 ---
