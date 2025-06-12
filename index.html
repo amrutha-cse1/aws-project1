@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amrutha | AWS Cloud Project</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Amrutha | AWS Deployment Project</title>
+  <link rel="icon" href="https://img.icons8.com/fluency/48/cloud.png">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Fira Sans', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #e0f7fa;
       display: flex;
@@ -21,20 +22,18 @@
     }
 
     h1 {
-      color: #80deea;
-      font-size: 2.7rem;
+      color: #ffccbc;
+      font-size: 2.6rem;
       margin-bottom: 10px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
     }
 
     #typedText {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #ffffff;
-      height: 30px;
       margin-bottom: 20px;
-      font-family: 'Poppins', sans-serif;
+      font-style: italic;
       font-weight: 500;
-      letter-spacing: 0.5px;
     }
 
     p {
@@ -54,7 +53,7 @@
     .btn {
       margin-top: 25px;
       padding: 12px 26px;
-      background-color: #4dd0e1;
+      background-color: #ffd180;
       color: #000;
       border: none;
       font-weight: bold;
@@ -64,7 +63,7 @@
     }
 
     .btn:hover {
-      background-color: #26c6da;
+      background-color: #ffb74d;
       transform: scale(1.05);
     }
 
@@ -78,20 +77,20 @@
   </style>
 </head>
 <body>
-  <h1>AWS EC2 Project Deployed!</h1>
+  <h1>🚀 AWS Deployment Showcase</h1>
   <div id="typedText"></div>
   <p>Hello! I'm <strong>Amrutha</strong>, an aspiring Cloud Engineer.  
-     This website is running on a live Amazon EC2 instance, deployed inside a custom VPC, with Apache server configured manually.</p>
+     This website demonstrates two methods of deployment: one using a live Amazon EC2 instance with a custom VPC and Apache, and the other using AWS S3 + CloudFront in a serverless setup.</p>
 
-  <div class="time" id="timeDisplay">Loading time...</div>
+  <div class="time" id="timeDisplay">Website Loaded At: --:--:--</div>
 
-  <button class="btn" onclick="alert('Thank you for visiting my AWS project! ☁️')">Say Hi </button>
-
-    <script>
+  <button class="btn" onclick="alert('Thank you for checking out my AWS project! ')">Say Hi </button>
+  <script>
     // Typing effect
     const messages = [
-      "Learning cloud by building hands-on projects...",
-      "This site is hosted on an EC2 instance."
+      "Learning Cloud by deploying projects hands-on...",
+      "This site is hosted on both EC2 and S3 + CloudFront ",
+      "AWS skills in action!"
     ];
     let msgIndex = 0;
     let charIndex = 0;
@@ -114,15 +113,14 @@
 
     typeMessage();
 
-    // Time updater
-    function updateTime() {
+    // Show load time once (for S3)
+    function showTime() {
       const now = new Date();
-      document.getElementById("timeDisplay").textContent = 
-        "Current Server Time: " + now.toLocaleTimeString();
+      document.getElementById("timeDisplay").textContent =
+        "Website Loaded At: " + now.toLocaleTimeString();
     }
 
-    setInterval(updateTime, 1000);
-    updateTime();
+    showTime();
   </script>
 </body>
 </html>
